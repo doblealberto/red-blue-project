@@ -2,10 +2,10 @@
 
 terraform {
   backend "s3" {
-    bucket         = "reed-blue-project"
+    bucket         = "red-blue-project"
     key            = "terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "red-blue-project"
+    region         = "us-east-2"
+    dynamodb_table = "red-blue-lock"
   }
   required_version = ">= 0.13" 
 }
