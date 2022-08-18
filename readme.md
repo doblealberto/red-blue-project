@@ -2,7 +2,7 @@
 
 Red-Blue app is a simple serverless app, the app's infratructure has been provisioned with terraform.
 
-
+To pick the red one <a href="https://ob1cj6ywdg.execute-api.us-east-1.amazonaws.com/prod/bye"> click here</a>
 ![Example Image](https://drive.google.com/uc?id=1Wckeb_U5gzzyfChVe6U1EftJXxvf_XO2)
 
 As we see the architecture design is simple there is one `prod` stage and within it two endpoints one for saying bye `/bye` a.k.a (red) and one for saying hello `/hello`
