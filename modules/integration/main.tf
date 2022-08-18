@@ -12,6 +12,11 @@ resource "aws_api_gateway_deployment" "apideploy" {
   depends_on  = [aws_api_gateway_integration.lambdaInt]
   rest_api_id = var.api_id
   stage_name  = "prod"
+  lifecycle {
+    create_before_destroy = true
+  }
+
+
 }
 
 resource "aws_lambda_permission" "apigw" {
@@ -19,5 +24,5 @@ resource "aws_lambda_permission" "apigw" {
   action        = "lambda:InvokeFunction"
   function_name = var.lambda_function_name
   principal     = "apigateway.amazonaws.com"
-  source_arn    = "${api_execution_arn}/*/*/*"
+  source_arn    = "${var.api_execution_arn}/*/*/*"
 }
