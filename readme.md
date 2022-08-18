@@ -7,6 +7,7 @@ Red-Blue app is a simple serverless app, the app's infratructure has been provis
 
 As we see the architecture design is simple there is one `prod` stage and within it two endpoints one for saying bye `/bye` a.k.a (red) and one for saying hello `/hello`
 ## Project Structure
+```
 ├── main.tf
 ├── modules
 │   ├── iam  `(grants permisions for cloudwatch to both api-gw and lambda resources) `
@@ -19,6 +20,7 @@ As we see the architecture design is simple there is one `prod` stage and within
 │       ├── inputs.tf
 │       ├── main.tf
         └── outputs.tf
+```
 
 ## Root terraform file
 ## terraform block
