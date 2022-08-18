@@ -2,8 +2,8 @@
 
 Red-Blue app is a simple serverless app, the app's infratructure has been provisioned with terraform.
 
-To pick the red one click on the image! <a href="https://ob1cj6ywdg.execute-api.us-east-1.amazonaws.com/prod/bye"><img src="https://incels.wiki/images/9/9c/Redpill2.png"/></a>
-To pick the blue one click on the image! <a href="https://ob1cj6ywdg.execute-api.us-east-1.amazonaws.com/prod/hello"><img src="https://incels.wiki/images/b/bb/Bluepill.png"/></a>
+To pick the red one click on the image! <a href="https://ob1cj6ywdg.execute-api.us-east-1.amazonaws.com/prod/bye"><img width="75px" height="75px" src="https://incels.wiki/images/9/9c/Redpill2.png"/></a>
+To pick the blue one click on the image! <a href="https://ob1cj6ywdg.execute-api.us-east-1.amazonaws.com/prod/hello"><img width="75px" height="75px" src="https://incels.wiki/images/b/bb/Bluepill.png"/></a>
 ### AND REMEMBER TO CHOOSE WISELY
 
 ![Example Image](https://drive.google.com/uc?id=1Wckeb_U5gzzyfChVe6U1EftJXxvf_XO2)
