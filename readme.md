@@ -10,7 +10,7 @@ As we see the architecture design is simple there is one `prod` stage and within
 ```
 ├── main.tf
 ├── modules
-│   ├── iam  (grants permisions for cloudwatch to both api-gw and lambda resources) 
+    ├── iam  (grants permisions for cloudwatch to both api-gw and lambda resources) 
     │   ├── apigw-role.json
     │   ├── lambda-role.json
     │   ├── main.tf
