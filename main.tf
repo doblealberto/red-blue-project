@@ -7,7 +7,7 @@ terraform {
     region         = "us-east-1"
     dynamodb_table = "red-blue-project"
   }
-  required_version = "4.26.0"
+  required_version = ">= 0.13" 
 }
 
 
