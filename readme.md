@@ -7,7 +7,7 @@ To pick the blue one click on the image! <a href="https://ob1cj6ywdg.execute-api
 
 
 
-### <center>AND REMEMBER TO CHOOSE WISELY</center>
+###                                   <center>AND REMEMBER TO CHOOSE WISELY</center>
 
 ![Example Image](https://drive.google.com/uc?id=1Wckeb_U5gzzyfChVe6U1EftJXxvf_XO2)
 
