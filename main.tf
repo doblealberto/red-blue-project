@@ -1,7 +1,7 @@
 
 
 resource "aws_api_gateway_rest_api" "apiLambda" {
-  name        = var.api_name
+  name = "hello-bye-challenge"
 }
 
 resource "aws_lambda_function" "lambda_bye" {
@@ -28,15 +28,15 @@ resource "aws_api_gateway_method" "Method1" {
 }
 
 module "apigw_conf1" {
-  source = "./modules/integration"
-  api_id = aws_api_gateway_rest_api.apiLambda.id
+  source            = "./modules/integration"
+  api_id            = aws_api_gateway_rest_api.apiLambda.id
   lambda_invoke_arn = aws_lambda_function.lambda_bye.invoke_arn
-  resource_id = aws_api_gateway_resource.Resource1.id
-  method =   aws_api_gateway_method.Method1.http_method
+  resource_id       = aws_api_gateway_resource.Resource1.id
+  method            = aws_api_gateway_method.Method1.http_method
   api_execution_arn = aws_api_gateway_rest_api.apiLambda.execution_arn
   depends_on = [
     aws_lambda_function.lambda_bye,
-    aws_api_gateway_rest_api.apiLambda, 
+    aws_api_gateway_rest_api.apiLambda,
     aws_api_gateway_resource.Resource1,
     aws_api_gateway_method.Method1,
   ]
@@ -67,15 +67,15 @@ resource "aws_api_gateway_method" "Method2" {
 }
 
 module "apigw_conf2" {
-  source = "./modules/integration"
-  api_id = aws_api_gateway_rest_api.apiLambda.id
+  source            = "./modules/integration"
+  api_id            = aws_api_gateway_rest_api.apiLambda.id
   lambda_invoke_arn = aws_lambda_function.lambda_hello.invoke_arn
-  resource_id = aws_api_gateway_resource.Resource2.id
-  method =   aws_api_gateway_method.Method2.http_method
+  resource_id       = aws_api_gateway_resource.Resource2.id
+  method            = aws_api_gateway_method.Method2.http_method
   api_execution_arn = aws_api_gateway_rest_api.apiLambda.execution_arn
   depends_on = [
     aws_lambda_function.lambda_bye,
-    aws_api_gateway_rest_api.apiLambda, 
+    aws_api_gateway_rest_api.apiLambda,
     aws_api_gateway_resource.Resource1,
     aws_api_gateway_method.Method1,
   ]
