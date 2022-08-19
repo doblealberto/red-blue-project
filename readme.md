@@ -39,7 +39,7 @@ terraform {
   backend "s3" {
     bucket         = "reed-blue-project"
     key            = "terraform.tfstate"
-    region         = "us-east-1"
+    region         = "us-west-1"
     dynamodb_table = "red-blue-project"
   }
 }
