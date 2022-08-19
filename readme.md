@@ -49,6 +49,7 @@ We start adding a backend in s3 as best practices dictates for storing the state
 ## IAM module instance and overview
 
 one the modules that are available in the project is the iam module, as we can see it takes to vars those two vars are then used in the module in order to provide de policies to the respective resources, path to the module is at `./modules/iam/`
+
 ```
 module "iam" {
   source           = "./modules/iam"
@@ -113,3 +114,41 @@ resource "aws_lambda_permission" "apigw" {
 ```
 Notice how the ```"${var.api_execution_arn}/*/*/*"``` statement allows any resource from our API to consume our lmabda functions.
 
+
+### ci-cd.yml  File  
+```
+ - uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-1
+```
+The actions configure under this directory start by configuring the amazon credetials as shown in the above piece of code. 
+
+### Terraform tasks
+```
+- uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt 
+      
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+
+    - name: Terraform Validate
+      id: validate 
+      run: terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan 
+
+    - name: Terraform Apply
+      id: apply
+      run: terraform apply -auto-approve
+```
+After adding the aws credentials we create the actions for autodeploying our infrastructure into AWS. 
+for more info on the action visit the docs at hashicorp/setup-terraform@v2 which is the official action for terraform
