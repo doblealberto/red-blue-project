@@ -15,7 +15,7 @@ To pick the blue one click on the image! <a href="https://ob1cj6ywdg.execute-api
 
 ![Example Image](https://drive.google.com/uc?id=1Wckeb_U5gzzyfChVe6U1EftJXxvf_XO2)
 
-As we see the architecture design is simple there is one `prod` stage and within it two endpoints one for saying bye `/bye` a.k.a (red) and one for saying hello `/hello`
+As we see the architecture design is simple there is one `prod` stage and within it two endpoints one for saying bye `/red`  and one for saying hello `/blue`
 ## Project Structure
 ```
 ├── main.tf
